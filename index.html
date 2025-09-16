@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Sephwa3D (Innovation^3) — GitHub Pages build (static-only)
+    GH_PAGES_MODE disables network POSTs and uses mailto fallback.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sephwa3D (Innovation^3) | Custom 3D Printing • Lithophanes • Prototyping</title>
+  <meta name="description" content="Sephwa3D (Innovation^3) — custom 3D printing, lithophanes, miniatures, and functional parts. Fast quotes, expert guidance, and polished results." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sephwa3D (Innovation^3)" />
+  <meta property="og:description" content="Custom 3D printing, lithophanes, miniatures, and functional parts. Start a project today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sephwa3d.com/" />
+  <meta property="og:image" content="https://sephwa3d.com/assets/og-image.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sephwa3D (Innovation^3)" />
+  <meta name="twitter:description" content="Custom 3D printing, lithophanes, miniatures, and functional parts." />
+  <meta name="twitter:image" content="https://sephwa3d.com/assets/og-image.png" />
+
+  <!-- Favicons (replace with real files if desired) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- JSON-LD: Organization + LocalBusiness (update socials or remove) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["Organization","LocalBusiness"],
+    "name":"Sephwa3D (Innovation^3)",
+    "url":"https://sephwa3d.com",
+    "logo":"https://sephwa3d.com/assets/logo.svg",
+    "image":"https://sephwa3d.com/assets/og-image.png",
+    "sameAs":[
+      "https://www.youtube.com/@YOUR_CHANNEL",
+      "https://www.instagram.com/YOUR_HANDLE",
+      "https://www.tiktok.com/@YOUR_HANDLE"
+    ],
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Rockford",
+      "addressRegion":"IL",
+      "addressCountry":"US"
+    },
+    "openingHoursSpecification":[{
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens":"09:00","closes":"17:00"
+    }],
+    "contactPoint":{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "email":"hello@sephwa3d.com"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0f0f12; --bg-elev:#14141a; --text:#e9e9ec; --muted:#b7b7c2;
+      --accent:#ff7a18; --accent-2:#ffb258; --ok:#22c55e; --err:#ef4444;
+      --focus:0 0 0 3px rgba(255,122,24,.4); --radius:14px; --shadow:0 6px 20px rgba(0,0,0,.35);
+      --header-h:64px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 70% -10%, rgba(255,122,24,.08), transparent 60%), var(--bg);color:var(--text);line-height:1.55;overflow-x:hidden}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    img{max-width:100%;display:block}
+
+    header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg-elev) 92%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{max-width:1200px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:16px;justify-content:space-between;min-height:var(--header-h)}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand svg{width:40px;height:40px}
+    .brand-title{font-weight:700;letter-spacing:.3px;font-size:1.05rem}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px}
+    nav a{color:var(--text);opacity:.9}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .btn{background:var(--accent);color:#141414;border:none;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn.secondary{background:#26262e;color:var(--text);border:1px solid rgba(255,255,255,.08)}
+
+    .menu-btn{display:none}
+    .drawer{position:fixed;inset:0 0 0 auto;width:min(88vw,360px);background:var(--bg-elev);transform:translateX(100%);transition:transform .25s ease;box-shadow:var(--shadow);z-index:60}
+    .drawer.open{transform:none}
+    @media (max-width:900px){ nav[aria-label="Main"]{display:none} .menu-btn{display:inline-flex} }
+
+    section{padding:64px 16px;scroll-margin-top:calc(var(--header-h) + 12px)}
+    .container{max-width:1200px;margin:0 auto}
+    .section-title{font-size:clamp(22px,2.4vw,28px);margin:0 0 18px}
+    .muted{color:var(--muted)}
+    .card{background:linear-gradient(180deg,#17171f,#121218);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .hero{padding:clamp(48px,8vw,100px) 16px 64px;background:radial-gradient(900px 400px at 20% -10%, rgba(255,122,24,.12), transparent 60%)}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-visual{min-height:260px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden}
+
+    .carousel{position:relative;overflow:hidden}
+    .carousel-track{display:flex;gap:16px;transition:transform .5s ease}
+    .carousel .item{flex:0 0 80%;max-width:80%;display:flex;flex-direction:column}
+    @media (min-width:700px){.carousel .item{flex-basis:33.333%;max-width:33.333%}}
+    .item .imgwrap{aspect-ratio:4/3;overflow:hidden}
+    .item .meta{padding:12px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .carousel-controls{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
+    .carousel button{pointer-events:auto;border:none;width:38px;height:38px;border-radius:999px;background:#1c1c24;color:#efefef}
+    .carousel .dots{display:flex;gap:8px;justify-content:center;margin-top:12px}
+    .carousel .dots button{width:8px;height:8px;border-radius:999px;background:#333}
+    .carousel .dots button[aria-current="true"]{background:var(--accent)}
+
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+    .filter-chip{background:#202028;border:1px solid rgba(255,255,255,.08);padding:8px 12px;border-radius:999px;cursor:pointer}
+    .filter-chip[aria-pressed="true"]{background:var(--accent);color:#141414}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+    @media (min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+
+    .video-grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media (min-width:900px){.video-grid{grid-template-columns:repeat(3,1fr)}}
+
+    footer{padding:36px 16px;border-top:1px solid rgba(255,255,255,.08);background:linear-gradient(0deg, rgba(255,122,24,.05), transparent 50%), #0e0e14}
+    .footer-inner{max-width:1200px;margin:0 auto;display:grid;gap:18px;grid-template-columns:2fr 1fr 1fr}
+    @media (max-width:900px){.footer-inner{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header role="banner">
+    <div class="nav" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Sephwa3D Home">
+        <img src="/assets/logo.svg" alt="Sephwa3D logo" width="40" height="40" />
+        <span class="brand-title">Sephwa3D <span class="muted">(Innovation^3)</span></span>
+      </a>
+      <nav aria-label="Main">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#upload">Upload</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn secondary" href="#upload">Upload</a>
+        <a class="btn" href="#contact">Start a Project</a>
+        <button class="menu-btn btn secondary" aria-controls="drawer" aria-expanded="false">Menu</button>
+      </div>
+    </div>
+    <aside class="drawer" id="drawer" aria-hidden="true">
+      <nav aria-label="Mobile">
+        <ul>
+          <li><a href="#home" data-close>Home</a></li>
+          <li><a href="#featured" data-close>Featured</a></li>
+          <li><a href="#gallery" data-close>Gallery</a></li>
+          <li><a href="#how" data-close>How It Works</a></li>
+          <li><a href="#upload" data-close>Upload</a></li>
+          <li><a href="#contact" data-close>Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <h1 id="hero-title">Precision 3D Printing, Fast & Friendly</h1>
+          <p>We turn your ideas into finished parts — lithophanes, miniatures, functional prototypes, and custom one-offs. Expert guidance, honest timelines.</p>
+          <div class="cta-row">
+            <a class="btn" href="#contact">Start a Project</a>
+            <a class="btn secondary" href="#how">See How It Works</a>
+          </div>
+        </div>
+        <div class="hero-visual card" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="featured" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 class="section-title" id="featured-title">Featured Prints</h2>
+        <p class="muted">Autoplay, pause on hover, swipe on mobile. Click “Quick View” for details.</p>
+        <div class="carousel card" data-carousel aria-roledescription="carousel">
+          <div class="carousel-track" role="group" aria-label="Featured items">
+            <article class="item"><div class="imgwrap"><img loading="lazy" src="https://picsum.photos/seed/litho1/800/600" alt="Lithophane" /></div><div class="meta"><h3>Lithophane • 4×6"</h3><div><span class="muted">Request Quote</span><button class="btn secondary" data-quick="Lithophane • 4×6|Classic backlit photo panel in PLA.|Request Quote">Quick View</button></div></div></article>
+            <article class="item"><div class="imgwrap"><img loading="lazy" src="https://picsum.photos/seed/mini2/800/600" alt="Miniature" /></div><div class="meta"><h3>Miniature • 75 mm</h3><div><span>$25+</span><button class="btn secondary" data-quick="Miniature • 75mm|High detail resin or PLA+.|From $25">Quick View</button></div></div></article>
+            <article class="item"><div class="imgwrap"><img loading="lazy" src="https://picsum.photos/seed/bracket3/800/600" alt="Bracket" /></div><div class="meta"><h3>Functional Bracket</h3><div><span>$15+</span><button class="btn secondary" data-quick="Functional Bracket|Durable CF-Nylon/PLA-Pro options.|From $15">Quick View</button></div></div></article>
+            <article class="item"><div class="imgwrap"><img loading="lazy" src="https://picsum.photos/seed/lamp4/800/600" alt="Lamp shade" /></div><div class="meta"><h3>Custom Lamp Shade</h3><div><span>Request Quote</span><button class="btn secondary" data-quick="Custom Lamp Shade|Diffuse patterns and logos.|Request Quote">Quick View</button></div></div></article>
+            <article class="item"><div class="imgwrap"><img loading="lazy" src="https://picsum.photos/seed/enclosure5/800/600" alt="Enclosure" /></div><div class="meta"><h3>Electronics Enclosure</h3><div><span>$30+</span><button class="btn secondary" data-quick="Electronics Enclosure|Snap-fit, labeled ports.|From $30">Quick View</button></div></div></article>
+            <article class="item"><div class="imgwrap"><img loading="lazy" src="https://picsum.photos/seed/custom6/800/600" alt="Part set" /></div><div class="meta"><h3>Custom Part Set</h3><div><span>Request Quote</span><button class="btn secondary" data-quick="Custom Part Set|Batch prints with QA.|Request Quote">Quick View</button></div></div></article>
+          </div>
+          <div class="carousel-controls" aria-hidden="true"><button data-prev aria-label="Previous">◀</button><button data-next aria-label="Next">▶</button></div>
+          <div class="dots" role="tablist" aria-label="Slides"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 class="section-title" id="gallery-title">Gallery</h2>
+        <div class="filters" role="toolbar" aria-label="Filter categories">
+          <button class="filter-chip" aria-pressed="true" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="litho">Lithophanes</button>
+          <button class="filter-chip" data-filter="mini">Miniatures</button>
+          <button class="filter-chip" data-filter="func">Functional</button>
+          <button class="filter-chip" data-filter="custom">Custom</button>
+        </div>
+        <div class="grid" id="gallery-grid">
+          <figure class="tile card" data-cat="litho"><img loading="lazy" alt="Lithophane portrait" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/lithoA/600/450" /><figcaption class="meta">Lithophane Panel</figcaption></figure>
+          <figure class="tile card" data-cat="mini"><img loading="lazy" alt="Tabletop miniature" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/miniB/600/450" /><figcaption class="meta">Tabletop Mini</figcaption></figure>
+          <figure class="tile card" data-cat="func"><img loading="lazy" alt="Tool holder" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/funcC/600/450" /><figcaption class="meta">Tool Holder</figcaption></figure>
+          <figure class="tile card" data-cat="custom"><img loading="lazy" alt="Personalized keycap" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/customD/600/450" /><figcaption class="meta">Custom Keycap</figcaption></figure>
+          <figure class="tile card" data-cat="litho"><img loading="lazy" alt="Backlit photo panel" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/lithoE/600/450" /><figcaption class="meta">Backlit Photo</figcaption></figure>
+          <figure class="tile card" data-cat="func"><img loading="lazy" alt="Camera mount" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/funcF/600/450" /><figcaption class="meta">Camera Mount</figcaption></figure>
+          <figure class="tile card" data-cat="mini"><img loading="lazy" alt="Creature bust" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/miniG/600/450" /><figcaption class="meta">Creature Bust</figcaption></figure>
+          <figure class="tile card" data-cat="custom"><img loading="lazy" alt="Logo coaster" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" data-src="https://picsum.photos/seed/customH/600/450" /><figcaption class="meta">Logo Coaster</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="container">
+        <h2 class="section-title" id="how-title">How It Works</h2>
+        <div class="timeline" style="display:grid;grid-template-columns: repeat(5,1fr);gap:12px">
+          <div class="step card" style="padding:16px;text-align:center"><b>Request</b><span class="muted">Share goals, refs & budget.</span></div>
+          <div class="step card" style="padding:16px;text-align:center"><b>Review</b><span class="muted">We confirm materials & fit.</span></div>
+          <div class="step card" style="padding:16px;text-align:center"><b>Prototype</b><span class="muted">Test piece if needed.</span></div>
+          <div class="step card" style="padding:16px;text-align:center"><b>Print</b><span class="muted">We run and QA your parts.</span></div>
+          <div class="step card" style="padding:16px;text-align:center"><b>Ship/Pickup</b><span class="muted">Tracked delivery or local.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="upload" aria-labelledby="upload-title">
+      <div class="container">
+        <h2 class="section-title" id="upload-title">Upload Files</h2>
+        <p class="muted">PNG/JPG/WebP and STL accepted. Max 20 MB per file. Preview before sending. <br><small>Privacy: files are used only to estimate your project and are not shared.</small></p>
+        <div class="dropzone" tabindex="0" aria-label="File upload area" data-dropzone>
+          <p><b>Drag & drop</b> images or STL files here</p>
+          <div class="dz-actions">
+            <input type="file" id="file-input" accept=".png,.jpg,.jpeg,.webp,.stl,model/stl,application/sla" multiple hidden />
+            <button class="btn" id="pick-files" type="button">Choose Files</button>
+            <button class="btn secondary" id="clear-files" type="button">Clear</button>
+          </div>
+          <div class="progress" aria-hidden="true"><i></i></div>
+          <div class="preview-list" aria-live="polite" aria-relevant="additions removals"></div>
+        </div>
+        <div class="helper" style="margin-top:8px">By uploading you agree you own rights to the files or have permission to use them.</div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="section-title" id="contact-title">Contact</h2>
+        <form class="card" id="contact-form" aria-describedby="form-status">
+          <div class="hp" style="display:none">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" />
+          </div>
+          <div class="row" style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" required /><div class="error" id="err-name"></div></div>
+            <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required /><div class="error" id="err-email"></div></div>
+          </div>
+          <div class="row" style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <div class="field"><label for="phone">Phone <span class="muted">(optional)</span></label><input id="phone" name="phone" type="tel" /></div>
+            <div class="field"><label for="budget">Budget</label>
+              <select id="budget" name="budget" required><option value="">Select</option><option>Under $50</option><option>$50–$150</option><option>$150–$300</option><option>$300–$750</option><option>$750+</option></select>
+              <div class="error" id="err-budget"></div>
+            </div>
+          </div>
+          <div class="row" style="display:grid;gap:12px;grid-template-columns:1fr 1fr">
+            <div class="field"><label for="usecase">Use-case</label>
+              <select id="usecase" name="usecase" required><option value="">Select</option><option>Lithophane</option><option>Miniature</option><option>Functional/Prototype</option><option>Custom/Other</option></select>
+              <div class="error" id="err-usecase"></div>
+            </div>
+            <div class="field"><label for="files-linked">Attach uploaded files</label><input id="files-linked" name="files" type="text" placeholder="Will auto-link from uploads…" readonly /><div class="helper">Shows file names you added in the Upload section.</div></div>
+          </div>
+          <div class="field"><label for="desc">Project Description</label><textarea id="desc" name="desc" rows="5" required placeholder="Tell us what you need: size, quantity, color/material preference, deadline…"></textarea><div class="error" id="err-desc"></div></div>
+          <div class="field"><button class="btn" type="submit">Send</button> <button class="btn secondary" type="button" id="mailto-fallback">Email Instead</button> <div id="form-status" class="helper" aria-live="polite"></div></div>
+        </form>
+      </div>
+    </section>
+
+    <section id="video" aria-labelledby="video-title">
+      <div class="container">
+        <h2 class="section-title" id="video-title">Time-Lapses</h2>
+        <div class="video-grid">
+          <figure class="video-card card"><iframe loading="lazy" title="Timelapse 1" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe><figcaption class="meta">Lithophane print timelapse</figcaption></figure>
+          <figure class="video-card card"><iframe loading="lazy" title="Timelapse 2" src="https://player.vimeo.com/video/76979871" allowfullscreen></iframe><figcaption class="meta">Functional part prototype</figcaption></figure>
+          <figure class="video-card card"><iframe loading="lazy" title="Timelapse 3" src="https://www.youtube.com/embed/oHg5SJYRHA0" allowfullscreen></iframe><figcaption class="meta">Miniature detail pass</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div><h3 style="margin:0 0 8px">Sephwa3D <span class="muted">(Innovation^3)</span></h3><p class="muted">Custom 3D printing studio offering lithophanes, miniatures, and functional parts. Rapid quotes, clear communication, and clean results.</p></div>
+      <div><b>Contact</b><p style="margin:.4rem 0 0"><a href="mailto:hello@sephwa3d.com">hello@sephwa3d.com</a></p><p class="muted" style="margin:.4rem 0 0">Rockford, IL • Mon–Fri 9–5</p></div>
+      <div><b>Social</b><p class="muted">Add links in the footer and JSON‑LD above.</p></div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" id="toast"></div>
+  <button class="top-btn" id="topBtn" aria-label="Scroll to top">↑</button>
+
+  <dialog id="quickModal" class="card" aria-labelledby="quickTitle">
+    <form method="dialog" style="margin:0">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.06)"><h3 id="quickTitle" style="margin:0">Item</h3><button class="btn secondary" value="close" aria-label="Close">Close</button></header>
+      <div style="padding:16px;display:grid;gap:12px"><img id="quickImg" alt="" style="border-radius:10px;max-height:50vh;object-fit:cover" /><p id="quickDesc" class="muted"></p><p><b id="quickPrice"></b></p></div>
+      <div style="padding:0 16px 16px"><a class="btn" href="#contact">Start a Project</a></div>
+    </form>
+  </dialog>
+
+  <script>
+    const GH_PAGES_MODE = true; // static hosting flag
+    const $ = (sel, el=document) => el.querySelector(sel);
+    const $$ = (sel, el=document) => [...el.querySelectorAll(sel)];
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Drawer
+    (()=>{const btn=$('.menu-btn'),drawer=$('#drawer');function open(v){drawer.classList.toggle('open',v);drawer.setAttribute('aria-hidden',String(!v));btn.setAttribute('aria-expanded',String(v));}btn?.addEventListener('click',()=>open(!drawer.classList.contains('open')));drawer?.addEventListener('click',e=>{if(e.target.matches('[data-close]'))open(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')open(false)})})();
+
+    // Toast
+    function toast(msg,ms=2200){const el=$('#toast');if(!el)return;el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),ms)}
+
+    // Top button
+    (()=>{const b=$('#topBtn');const onScroll=()=>b.classList.toggle('show',window.scrollY>700);onScroll();window.addEventListener('scroll',onScroll,{passive:true});b.addEventListener('click',()=>window.scrollTo({top:0,behavior:prefersReduced?'auto':'smooth'}))})();
+
+    // Carousel + Quick View
+    (()=>{const root=document.querySelector('[data-carousel]');if(!root)return;const track=root.querySelector('.carousel-track');const items=$$('.item',track);const dotsWrap=root.querySelector('.dots');const prev=root.querySelector('[data-prev]');const next=root.querySelector('[data-next]');let index=0,timer=null,startX=0,dx=0;items.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Go to slide '+(i+1));b.addEventListener('click',()=>go(i));dotsWrap.appendChild(b)});function update(){const step=items[0].getBoundingClientRect().width+16;track.style.transform=`translateX(${-step*index}px)`;$$('.dots button',root).forEach((d,i)=>d.setAttribute('aria-current',i===index))}function go(i){index=Math.max(0,Math.min(items.length-1,i));update()}function nextSlide(){go((index+1)%items.length)}function prevSlide(){go((index-1+items.length)%items.length)}function startAuto(){if(prefersReduced)return;stopAuto();timer=setInterval(nextSlide,4000)}function stopAuto(){if(timer)clearInterval(timer);timer=null}root.addEventListener('mouseenter',stopAuto);root.addEventListener('mouseleave',startAuto);document.addEventListener('visibilitychange',()=>document.hidden?stopAuto():startAuto());window.addEventListener('resize',update);next.addEventListener('click',nextSlide);prev.addEventListener('click',prevSlide);track.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;dx=0},{passive:true});track.addEventListener('touchmove',e=>{dx=e.touches[0].clientX-startX},{passive:true});track.addEventListener('touchend',()=>{if(Math.abs(dx)>40){dx<0?nextSlide():prevSlide()}});go(0);startAuto();const modal=$('#quickModal');const qTitle=$('#quickTitle'),qImg=$('#quickImg'),qDesc=$('#quickDesc'),qPrice=$('#quickPrice');root.addEventListener('click',e=>{const t=e.target.closest('button[data-quick]');if(!t)return;const [title,desc,price]=t.dataset.quick.split('|');const cardImg=t.closest('.item').querySelector('img')?.src||'';qTitle.textContent=title;qDesc.textContent=desc;qPrice.textContent=price||'';qImg.src=cardImg;qImg.alt=title;modal.showModal()});modal?.addEventListener('close',()=>qImg.removeAttribute('src'))})();
+
+    // Gallery filters + lazy load
+    (()=>{const chips=$$('.filter-chip');const grid=$('#gallery-grid');const tiles=$$('.tile',grid);chips.forEach(ch=>ch.addEventListener('click',()=>{const f=ch.dataset.filter;chips.forEach(c=>c.setAttribute('aria-pressed',String(c===ch)));tiles.forEach(t=>{const show=f==='all'||t.dataset.cat===f;t.style.display=show?'':'none'})}));const io='IntersectionObserver'in window?new IntersectionObserver((ents)=>{ents.forEach(e=>{if(e.isIntersecting){const img=e.target;const src=img.getAttribute('data-src');if(src){img.src=src;img.removeAttribute('data-src')}io.unobserve(img)}})},{rootMargin:'200px'}):null;$$('img[data-src]',grid).forEach(img=>io?io.observe(img):(img.src=img.dataset.src))})();
+
+    // Upload widget (static-safe)
+    (()=>{const dz=document.querySelector('[data-dropzone]');if(!dz)return;const input=$('#file-input');const pick=$('#pick-files');const clearBtn=$('#clear-files');const preview=dz.querySelector('.preview-list');const bar=dz.querySelector('.progress > i');const linked=$('#files-linked');const MAX=20*1024*1024;const ACCEPT=['image/png','image/jpeg','image/webp','application/sla','model/stl','.stl'];let files=[];pick.addEventListener('click',()=>input.click());input.addEventListener('change',e=>handle([...e.target.files]));clearBtn.addEventListener('click',()=>{files=[];preview.innerHTML='';linked.value='';bar.style.width='0%';toast('Cleared selected files')});['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.style.borderColor='var(--accent)'}));['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.style.borderColor='rgba(255,255,255,.16)'}));dz.addEventListener('drop',e=>handle([...e.dataTransfer.files]));dz.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();input.click()}});function okType(f){const ext=f.name.toLowerCase().endsWith('.stl');return ACCEPT.includes(f.type)||ext}function handle(list){const added=[];for(const f of list){if(!okType(f)){toast(`Unsupported: ${f.name}`);continue}if(f.size>MAX){toast(`Too large (>20MB): ${f.name}`);continue}files.push(f);added.push(f)}if(!added.length)return;render(added);linked.value=files.map(f=>f.name).join(', ');fakeProgress()}function render(list){for(const f of list){const wrap=document.createElement('div');wrap.className='preview';const cap=document.createElement('div');cap.className='helper';cap.textContent=f.name;if(f.type.startsWith('image/')){const img=document.createElement('img');img.alt=f.name;const fr=new FileReader();fr.onload=()=>img.src=fr.result;fr.readAsDataURL(f);wrap.appendChild(img)}else{const box=document.createElement('div');box.className='card';box.style.aspectRatio='1/1';box.style.display='grid';box.style.placeItems='center';box.textContent='STL';wrap.appendChild(box)}wrap.appendChild(cap);preview.appendChild(wrap)}}function fakeProgress(){let p=0;const id=setInterval(()=>{p=Math.min(100,p+8);bar.style.width=p+'%';if(p>=100){clearInterval(id);setTimeout(()=>{bar.style.width='0%'},250);if(GH_PAGES_MODE){toast('Files staged locally — attach via email on send.')}}},80)}})();
+
+    // Contact form (static-safe)
+    (()=>{const form=$('#contact-form');if(!form)return;const status=$('#form-status');const hp=$('#company');const fields={name:$('#name'),email:$('#email'),budget:$('#budget'),usecase:$('#usecase'),desc:$('#desc')};const mailBtn=$('#mailto-fallback');const linked=$('#files-linked');function err(el,msg){const id='err-'+el.id;el.setAttribute('aria-invalid','true');$('#'+id).textContent=msg}Object.values(fields).forEach(el=>el.addEventListener('input',()=>{el.setCustomValidity('');const id='err-'+el.id;$('#'+id)&&($('#'+id).textContent='');el.setAttribute('aria-invalid','false')}));mailBtn.addEventListener('click',()=>mailto());form.addEventListener('submit',e=>{e.preventDefault();if(hp.value.trim()!==''){status.textContent='Thanks!';return}let ok=true;if(!fields.name.value.trim()){err(fields.name,'Please enter your name.');ok=false}if(!fields.email.validity.valid){err(fields.email,'Enter a valid email.');ok=false}if(!fields.budget.value){err(fields.budget,'Select a budget.');ok=false}if(!fields.usecase.value){err(fields.usecase,'Select a use-case.');ok=false}if(!fields.desc.value.trim()){err(fields.desc,'Describe your project.');ok=false}if(!ok){status.textContent='Please fix the highlighted fields.';return}if(GH_PAGES_MODE){status.innerHTML='<span class="success">Open your email client to send.</span>';mailto();return}});function mailto(){const subject=encodeURIComponent('Sephwa3D Project Request');const body=encodeURIComponent(['Name: '+fields.name.value,'Email: '+fields.email.value,'Phone: '+($('#phone').value||''),'Budget: '+fields.budget.value,'Use-case: '+fields.usecase.value,'Files: '+linked.value,'','Description:',''+fields.desc.value].join('\n'));window.location.href=`mailto:hello@sephwa3d.com?subject=${subject}&body=${body}`}})();
+  </script>
+</body>
+</html>
